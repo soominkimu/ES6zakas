@@ -1,5 +1,4 @@
 // Nicholas C. Zakas, Understanding ECMAScript 6
-
 // Chap 2. Strings and Regular Expressions
 
 function c02001() {
@@ -223,15 +222,18 @@ function c02012() {
 		// throws an error in ES5, okay in ES6
 		re2 = new RegExp(re1, "g");
 
-	console.log(re1.toString());		// "/ab/i"
-	console.log(re2.toString());		// "/ab/g"
+	console.log(re1.toString());	// "/ab/i"
+	console.log(re2.toString());	// "/ab/g"
 
-	console.log(re1.toString("ab"));	// true
-	console.log(re2.toString("ab"));	// true
+	console.log(re1.test("ab"));	// true
+	console.log(re2.test("ab"));	// true
 
-	console.log(re1.toString("AB"));	// true
-	console.log(re2.toString("AB"));	// false
+	console.log(re1.test("AB"));	// true
+	console.log(re2.test("AB"));	// false
 
 	console.groupEnd();
 	return 0;
 }
+c02012();
+
+
